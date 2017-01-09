@@ -1,0 +1,111 @@
+<html lang="en">
+	<head>
+		<title>Booking</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/jquery.uniform.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			  
+		</script>
+	</head>
+	<body>
+		<article>
+		<h1>Bus Booking System</h1>
+		<form id="booking_form">
+			<ul>
+				<li>
+					<label for="name">Your Name:</label>
+					<input type="text" size="40" name="name" id="name" required/>
+				</li>
+				<li>
+					<label for="email">ID Number:</label>
+					<input type="text" name="id" size="40" id="email" required/>
+				</li>
+				<li>
+					<label for="car">Age:</label>
+					<select id="car" name="age" required>
+						<option value="1">Less than 9</option>
+						<option value="2">9 to 18</option>
+						<option value="3">18 Above</option>
+					</select>
+				</li>
+				<li>
+					<label for="car">Bus:</label>
+					<select id="car" name="bus" required>
+						<option value="BUS1">AC[Morning]</option>
+						<option value="BUS2">Non-AC[Afternoon]</option>
+						<option value="BUS3">Sleeper[Evening]</option>
+						<option value="BUS4">Night-AC</option>
+					</select>
+				</li>
+				
+				<li>
+					<label for="car">Source:</label>
+					<select id="car" name="source" required>
+						<option value="1">Chandigarh</option>
+						<option value="2">Kalka</option>
+						<option value="3">Dharampur</option>
+						<option value="4">Solan</option>
+						<option value="5">Shimla</option>
+					</select>
+				</li>
+				
+				<li>
+					<label for="car">Destination:</label>
+					<select id="car" name="destination" required>
+						<option value="1">Chandigarh</option>
+						<option value="2">Kalka</option>
+						<option value="3">Dharampur</option>
+						<option value="4">Solan</option>
+						<option value="5">Shimla</option>
+					</select>
+				</li>
+				
+				<li>
+					<label for="car">Ticket Count:</label>
+					<select id="car" name="count" required>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</li>
+				
+			</ul>
+			<p>
+				
+			</p>
+		</form>
+		
+		</article>
+		<button type="submit" class="action">Book Seats</button>
+		<h2 id="h_2" ></h2>
+	</body>
+	
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+
+			var url = "book.php"; // the script where you handle the form input.
+
+			$.ajax({
+				   type: "POST",
+				   url: url,
+				   data: $("#booking_form").serialize(), // serializes the form's elements.
+				   success: function(data)
+				   {
+						// $("#h_2").text($("form").serialize());
+						$( "#h_2" ).html( data );
+				   }
+				 });
+
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+		
+    });
+});
+</script>
+	
+</html>
