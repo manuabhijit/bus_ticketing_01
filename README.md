@@ -40,7 +40,7 @@ PHP MySQL Sample Project: Registers passengers for 4 buses and 5 destination and
 		
 		No copy-rights reserved.
 		
-#Instalation Steps
+#Installation Steps
 
   Make sure you have PHP and MySQL Working (probably with Xampp).
   Unzip the folder in PHP server dirctory. 
