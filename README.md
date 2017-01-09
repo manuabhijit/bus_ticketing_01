@@ -36,5 +36,20 @@ PHP MySQL Sample Project: Registers passengers for 4 buses and 5 destination and
 		2. First come first serve seat allocation system.
 		3. My SQL Database 
 		4. Clean Code
+		5. Uses serialized form data
 		
 		No copy-rights reserved.
+		
+#Instalation Steps
+
+  Make sure you have PHP and MySQL Working (probably with Xampp).
+  Unzip the folder in PHP server dirctory. 
+  Create a database and import database_demo_files -> bus_reg_system.sql. This would create to tables.
+  Also see database_demo_files -> bus_reg_system.sql in your text editor.
+  
+  Now open book.php and search for DB connection variables (You may need to change )
+  $host="localhost";	$username="root";	$password=""; 		$database="db_bus";
+  
+  The Web-Application should be up and running by now
+  
+	
